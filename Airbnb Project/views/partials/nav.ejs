@@ -1,0 +1,122 @@
+<header class="bg-red-500 text-white p-4 shadow-md">
+  <nav class="container mx-auto flex justify-between items-center">
+    <ul class="flex space-x-4">
+      <li>
+        <a style="font-weight: 600; font-size: 30px; color: white; padding: 5px;
+        border-radius: 2px; box-shadow: 0 0 30px rgb(177, 5, 5); border: 1px solid white; border-radius: 3px;"
+          href="/"
+
+
+          class="<%= currentPage === 'index' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >airbnb</a
+        >
+      </li>
+
+      <% if(isLoggedIn) {%>
+      <li>
+        <a
+          href="/homes"
+          class="<%= currentPage === 'Home' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Homes-List</a
+        >
+      </li>
+      <li>
+        <a
+          href="/favourites"
+          class="<%= currentPage === 'favourites' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Favourites</a
+        >
+      </li>
+      <li>
+        <a
+          href="/bookings"
+          class="<%= currentPage === 'bookings' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Bookings</a
+        >
+      </li>
+      <li>
+        <a
+          href="/host/host-home-list"
+          class="<%= currentPage === 'host-homes' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Host Homes</a
+        >
+      </li>
+      <li>
+        <a
+          href="/host/add-home"
+          class="<%= currentPage === 'addHome' ? 'bg-red-400' : 'hover:bg-red-400' %> py-2 px-4 rounded transition duration-300"
+          >Add Home</a
+        >
+      </li>
+      <% } %>
+
+      
+
+       <% if (!isLoggedIn) { %>
+        <li>
+          <a
+            href="/signup"
+            class="hover:bg-red-400 py-2 px-4 rounded transition duration-300 dip"
+            >SignUp</a
+          >
+        </li>
+
+        
+
+        <li>
+          <a
+            href="/login"
+            class="hover:bg-red-400 py-2 px-4 rounded transition duration-300 dop"
+            >Login</a
+          >
+        </li>
+
+
+
+        <% } else { %>
+          <li>
+          <form action="/logout" method="POST">
+            <button style="margin-left: 600%; border: 2px solid black; background-color: rgb(230, 80, 5);"
+              
+              class="hover:bg-red-400 py-2 px-4 rounded transition duration-300"
+              >Logout</button
+            >
+
+            
+
+
+          </form>
+          </li>
+        <% } %> 
+      
+      
+
+
+
+
+      </li>
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+  </nav>
+</header>
